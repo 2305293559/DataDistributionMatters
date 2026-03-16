@@ -9,7 +9,7 @@ import warnings
 import joblib
 import numpy as np
 import pandas as pd
-import torch
+# import torch
 from pathlib import Path
 from sklearn.model_selection import GridSearchCV, train_test_split, RepeatedKFold, cross_val_score
 from sklearn.preprocessing import StandardScaler
@@ -29,7 +29,7 @@ class TabularModelTrainer:
         self.data_path = data_path
         self.output_dir = output_dir
         self.random_state = random_state
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        # self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
         # 存储容器
         self.models = {}
@@ -221,8 +221,9 @@ def process_pipeline(train_csv, test_csv, output_dir):
     trainer.save_all_results()
 
 
+import time
 if __name__ == "__main__":
-    F_NUM = 6
+    F_NUM = 1
     # 外部测试文件路径
     EXTERNAL_TEST_FILE = f"external_test_F{F_NUM}.csv" 
     # 初始数据集文件夹
@@ -235,6 +236,13 @@ if __name__ == "__main__":
     for f in csv_files:
         print(f"\n处理文件: {f.name}")
         out_path = os.path.join(OUTPUT_BASE, f.stem)
+        
+        start_time = time.time()  # 记录程序开始时间
+        
         process_pipeline(str(f), EXTERNAL_TEST_FILE, out_path)
         
+        end_time = time.time()  # 记录程序结束时间
+        elapsed_time = end_time - start_time  # 计算总耗时
+        print(f"\n程序运行总耗时: {elapsed_time:.2f} 秒")
+
         
