@@ -1,6 +1,6 @@
 Code and data for "Data distribution matters: enhancing model generalization in data-driven materials discovery by intentionally exploiting both positive and negative data"
 
-There are 4 branches which are  Data-generation, Database, Model-training, and main code, respectively.
+There are files which are  Data-generation, Database,  and Model-training, respectively.
 
 If you use this code, please cite our paper:
 
