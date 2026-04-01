@@ -12,7 +12,7 @@ author={Yiheng Wu, Lijun Liu, Wei Deng, Haodong Jiang, Ruotong Li, Ming Hu, Bo P
 Dapeng Wang 
 },
   
-journal={Under review},
+journal={Acta Physico-Chimica Sinica},
   
 year={2026}
 
