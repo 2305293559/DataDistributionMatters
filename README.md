@@ -1,6 +1,6 @@
 Code and data for "Data distribution matters: enhancing model generalization in data-driven materials discovery by intentionally exploiting both positive and negative data"
 
-There are files which are  Data-generation, Database,  and Model-training, respectively.
+There are 3 files which are  Data-generation, Database,  and Model-training, respectively.
 
 If you use this code, please cite our paper:
 
